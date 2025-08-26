@@ -1,0 +1,24 @@
+def Reverse(Pattern):
+        rev=''
+    for char in Pattern:
+        rev= char +rev      
+    return rev
+
+
+def Complement(Pattern):
+    comp=''
+    for char in Pattern:
+        if char == 'A':
+            comp= comp + 'T'
+        if char == 'T':
+            comp= comp + 'A'
+        if char == 'C':
+            comp= comp + 'G'
+        if char == 'G':
+            comp= comp + 'C'
+    return comp    
+
+def ReverseComplement(Pattern):   
+    Pattern=Reverse(Pattern)
+    Pattern= Complement(Pattern)
+    return Pattern
